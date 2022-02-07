@@ -1,8 +1,10 @@
 return {
-    -- ui
     {
         "luukvbaal/stabilize.nvim",
         config = function() require("stabilize").setup() end
-    }, -- lsp-installer
-    {"williamboman/nvim-lsp-installer"}
+    },
+    {
+        "williamboman/nvim-lsp-installer",
+        config = function() require("custom.plugins.lsp_installer") end
+    }
 }
