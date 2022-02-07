@@ -8,7 +8,7 @@ M.plugins = {
     install = require "custom.plugins",
     status = {colorizer = true},
     options = {
-        lspconfig = {setup_lspconf = "custom.plugins.lspconfig"},
+        lspconfig = {setup_lspconf = "custom.plugins.lsp.config"},
         statusline = {
             style = "arrow" -- default, round , slant , block , arrow
         }
@@ -16,9 +16,10 @@ M.plugins = {
     default_plugin_config_replace = {
         nvim_treesitter = {
             ensure_installed = {
-                "bash", "c", "cmake", "cpp", "dockerfile", "go", "java",
-                "json5", "latex", "llvm", "lua", "make", "python", "regex",
-                "rust", "scala", "toml", "yaml"
+                "bash", "c", "cmake", "cpp", "dockerfile", "go", "gomod",
+                "html", "http", "java", "javascript", "json5", "latex", "llvm",
+                "lua", "make", "markdown", "ninja", "python", "regex", "rust",
+                "scala", "toml", "typescript", "yaml"
             }
         },
         nvim_tree = {
