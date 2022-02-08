@@ -9,7 +9,6 @@ M.setup_lsp = function(attach, capabilities)
         "clangd", -- c/c++
         "cmake", -- cmake
         "cssls", -- css, less, sass
-        "denols", -- javascript, typescript
         "dockerls", -- docker
         "gopls", -- go
         "groovyls", -- groovy
@@ -17,8 +16,8 @@ M.setup_lsp = function(attach, capabilities)
         "jsonls", -- json
         "jdtls", -- java
         "texlab", -- latex
+        "tsserver", -- javascript, typescript
         "sumneko_lua", -- lua
-        "zeta_note", -- markdown
         "pyright", -- python
         "rust_analyzer", -- rust
         "taplo", -- toml
