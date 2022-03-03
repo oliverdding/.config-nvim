@@ -2,7 +2,7 @@ local M = {}
 
 M.options = {relativenumber = true, tabstop = 4, shiftwidth = 4}
 
-M.ui = {italic_comments = true, theme = "gruvbox"}
+M.ui = {italic_comments = true, theme = "nord"}
 
 M.plugins = {
     install = require "custom.plugins",
