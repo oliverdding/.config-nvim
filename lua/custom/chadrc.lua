@@ -2,19 +2,17 @@ local M = {}
 
 M.options = {relativenumber = true, tabstop = 4, shiftwidth = 4}
 
-M.ui = {italic_comments = true, theme = "nord"}
+M.ui = {theme = "nord"}
 
 M.plugins = {
-    install = require "custom.plugins",
-    status = {colorizer = true},
+    user = require "custom.plugins",
     options = {
-        lspconfig = {setup_lspconf = "custom.plugins.lsp.config"},
-        statusline = {
-            style = "arrow" -- default, round , slant , block , arrow
-        }
-    },
-    default_plugin_config_replace = {
-        nvim_treesitter = {
+        lspconfig = {
+           setup_lspconf = "custom.plugins.lspconfig",
+        },
+     },
+     override = {
+        ["nvim-treesitter/nvim-treesitter"] = {
             ensure_installed = {
                 "bash", "c", "cmake", "cpp", "dockerfile", "go", "gomod",
                 "html", "http", "java", "javascript", "json5", "latex", "llvm",
@@ -22,11 +20,14 @@ M.plugins = {
                 "scala", "toml", "typescript", "yaml"
             }
         },
-        nvim_tree = {
-            view = {side = 'right', auto_resize = true},
-            trash = {cmd = "rmtrash", require_confirm = true}
+        ["kyazdani42/nvim-tree.lua"] = {
+            view = {side = 'right'},
+            git = {
+                enable = true,
+                ignore = true,
+             },
         },
-        gitsigns = {
+        ["lewis6991/gitsigns.nvim"] = {
             current_line_blame = true,
             current_line_blame_opts = {ignore_whitespace = true}
         }
