@@ -1,7 +1,5 @@
 local M = {}
 
-M.options = {relativenumber = true, tabstop = 4, shiftwidth = 4}
-
 M.ui = {theme = "nord"}
 
 M.plugins = {
