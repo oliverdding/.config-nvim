@@ -1,9 +1,9 @@
 return function()
     local opts = {
-        hover_actions = {
-            auto_focus = true,
-        },
         tools = {
+            hover_actions = {
+                auto_focus = true,
+            },
             crate_graph = {
                 backend = "plain",
             },
