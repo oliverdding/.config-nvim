@@ -6,6 +6,10 @@ return {
     ["mfussenegger/nvim-dap"] = {
 
     },
+    ["theHamsta/nvim-dap-virtual-text"] = {
+        after = "nvim-dap",
+        config = require("custom.plugins.user.dapvt"),
+    },
     ["rcarriga/nvim-dap-ui"] = {
         after = "nvim-dap",
         config = require("custom.plugins.user.dapui"),
