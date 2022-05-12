@@ -1,9 +1,21 @@
-local map = require("core.utils").map
+local map = nvchad.map
 
-map("n", "<leader>b", '<Cmd>lua require"dap".toggle_breakpoint()<CR>')
-map("n", "<leader>c", '<Cmd>lua require"dap".continue()<CR>')
-map("n", "<leader>s", '<Cmd>lua require"dap".step_over()<CR>')
-map("n", "<leader>i", '<Cmd>lua require"dap".step_into()<CR>')
-map("n", "<leader>o", '<Cmd>lua require"dap".step_out()<CR>')
+map('n', '<D-h>', function() require"dap".step_out() end)
+map('n', "<D-l>", function() require"dap".step_into() end)
+map('n', '<D-j>', function() require"dap".step_over() end)
+map('n', '<D-k>', function() require"dap".step_back() end)
+map('n', '<D-g>', function() require"dap".continue() end)
+map('n', '<D-c>', function() require"dap".run_to_cursor() end)
 
-map("n", "<leader>d", '<Cmd>lua require"dapui".toggle()<CR>')
+map("n", "<leader>du", function() require"dapui".toggle() end)
+map('n', '<leader>db', function() require"dap".toggle_breakpoint() end)
+map('n', '<leader>dB', function()  require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: ')) end)
+map('n', '<leader>da', function() require"dap".list_breakpoints() end)
+map('n', '<leader>dR', function() require"dap".clear_breakpoints() end)
+map('n', '<leader>di', function() require"dap.ui.widgets".hover() end)
+map('n', '<leader>d?', function() local widgets=require"dap.ui.widgets";widgets.centered_float(widgets.scopes) end)
+map('n', '<leader>dp', function() require"dap".pause() end)
+map('n', '<leader>dc', function() require"dap".terminate() end)
+map('n', '<leader>dr', ':lua require"dap".repl.toggle({}, "vsplit")<CR><C-w>l')
+map('n', '<leader>dk', ':lua require"dap".up()<CR>zz')
+map('n', '<leader>dj', ':lua require"dap".down()<CR>zz')
