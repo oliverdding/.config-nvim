@@ -5,10 +5,9 @@ M.mappings = require "custom.mappings"
 
 M.ui = {
   lsp_semantic_tokens = true,
-  transparency = true,
   telescopt = { style = "bordered" },
-  theme_toggle = { "gruvbox" },
-  theme = "gruvbox",
+  theme_toggle = { "everforest" },
+  theme = "everforest",
   statusline = {
     separator_style = "arrow",
   },
